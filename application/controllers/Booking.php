@@ -62,10 +62,16 @@ class Booking extends MY_Controller {
 
         if ($input->status == "paid") {
             $input->status = "in";
-            $dataKamar = ['status' => 2];
+            $dataKamar = [
+                'id_kamar'  => $input->id_kamar,
+                'status'    => 2
+            ];
         } elseif ($input->status == "in") {
             $input->status = "out";
-            $dataKamar = ['status' => 1];
+            $dataKamar = [
+                'id_kamar'  => $input->id_kamar,
+                'status'    => 1
+            ];
         }
 
         $dataBooking = [
@@ -75,10 +81,10 @@ class Booking extends MY_Controller {
         ];
 
         $this->booking->table = 'booking';
-        if ($this->booking->update($dataBooking)) {
+        if ($this->booking->where('id_booking', $input->id_booking)->update($dataBooking)) {
             // Update data kamar
             $this->booking->table = 'kamar';
-            if ($this->booking->update($dataKamar)) {
+            if ($this->booking->where('id_kamar', $input->id_kamar)->update($dataKamar)) {
                 $this->session->set_flashdata('success', 'Status kamar berhasil diupdate!');
                 redirect(base_url("booking/databooking"));
             } else {
