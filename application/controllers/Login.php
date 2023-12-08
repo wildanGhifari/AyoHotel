@@ -30,7 +30,7 @@ class Login extends MY_Controller {
         }
 
         if ($this->login->run($input)) {
-            $this->session->set_flashdata('success', 'Successful login, welcome');
+            $this->session->set_flashdata('success', 'Login berhasil, selamat datang kembali!');
             redirect(base_url());
         } else {
             $this->session->set_flashdata('error', 'Email or password you entered is wrong');

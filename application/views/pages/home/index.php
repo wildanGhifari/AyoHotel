@@ -1,3 +1,4 @@
+<?php $this->load->view('layouts/_alerts') ?>
 <section class="container-fluid p-4 mb-5">
     <div class="d-flex flex-row justify-content-between align-items-end">
         <h2>Kamar tersedia</h2>

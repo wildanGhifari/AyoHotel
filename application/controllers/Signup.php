@@ -29,7 +29,7 @@ class Signup extends My_Controller {
         }
 
         if ($this->signup->run($input)) {
-            $this->session->set_flashdata('success', 'Successfully registered, please check the verification email in your inbox');
+            $this->session->set_flashdata('success', 'Registrasi anda berhasil, selamat datang!');
 
             redirect(base_url('/login'));
         } else {

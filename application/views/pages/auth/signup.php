@@ -21,6 +21,7 @@
         <div id="form-container">
             <h3 style="width: 100%;" class="mb-5">Sign up</h3>
             <div class="form-inputs">
+                <?php $this->load->view('layouts/_alerts') ?>
                 <?= form_open('signup', ['method' => 'POST']) ?>
                 <div class="form-floating mb-3">
                     <?= form_input('name', $input->name, ['class' => 'form-control', 'placeholder' => 'Nama lengkap', 'required' => true]) ?>

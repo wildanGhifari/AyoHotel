@@ -21,6 +21,7 @@
         <div id="form-container">
             <h3 style="width: 100%;" class="mb-5">Login</h3>
             <div class="form-inputs">
+                <?php $this->load->view('layouts/_alerts') ?>
                 <?= form_open('login', ['method' => 'POST']) ?>
                     <div class="form-floating mb-3">
                         <?= form_input('email', $input->email, ['type' => 'email', 'name' => 'email', 'class' => 'form-control', 'placeholder' => 'your@mail.com', 'required' => true]) ?>
