@@ -25,7 +25,7 @@
     </div>
 </section>
 <section class="container-fluid p-5 bg-dark-subtle border-bottom border-dark-subtle d-flex flex-wrap justify-content-center gap-3">
-    <h2>Testimoni</h2>
+    <h2>Review Kamar</h2>
     <?php foreach ($reviews as $review) : ?>
         <div class="p-4 bg-light rounded w-100">
             <div class="d-flex gap-1">

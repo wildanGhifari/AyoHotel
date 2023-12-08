@@ -41,7 +41,7 @@
                 </li>
             <?php else : ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="<?= base_url("booking/data-booking"); ?>">Data Booking</a>
+                    <a class="nav-link" href="<?= base_url("booking/databooking"); ?>">Data Booking</a>
                 </li>
                 <?php endif ?>
             </ul>
